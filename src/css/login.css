@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+
+    --color-bg: #1a1a2e;       /* fundo */
+    --color-cabecalho: #0f0f1f; 
+    --color-primary: #6c63ff;  /* roxo */
+    --color-text: #fff;        /* branco */
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container{
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--color-cabecalho);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    justify-content: center;
+}
+
+.login-logo{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.login-logo img {
+  width: 70px;
+  margin-bottom: 0.5rem;
+}
+
+.login-logo h1 {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+
+.input-group label{
+    margin-left: 0.1rem;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+.input-group input{
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.input-group input:focus {
+    outline: 2px solid var(--cor-bg);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #1a1a2e;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background-color: var(--cor-primary);
+}
+
+.login-extra {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.login-extra a {
+    color: var(--cor-principal);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-extra a:hover {
+    text-decoration: underline;
+}
+
+.cadastre-se{
+    margin: 20px;
+    text-align: center;
+}
+
+.cadastre-se p{
+    margin: 10px;
+    padding: 10px;
+}
+
+.cadastre-se a{
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.cadastre-se a:hover{
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    padding: 10px;
+}
