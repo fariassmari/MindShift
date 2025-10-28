@@ -1,11 +1,22 @@
-const btnMenu = document.getElementById('btn-menu');
-const menuLateral = document.getElementById('menu-lateral');
-const btnFechar = document.getElementById('btn-fechar');
+import { criaHeader } from "./components/header.js";
+import { criaFooter } from "./components/footer.js";
 
-btnMenu.addEventListener('click',() => {
-    menuLateral.style.width = '250px';
-})
+document.addEventListener("DOMContentLoaded", () => {
+    const header = criaHeader();
+    const footer = criaFooter();
 
-btnFechar.addEventListener('click', () => {
-    menuLateral.style.width = '0';
-})
+    document.body.prepend(header);
+    document.body.append(footer);
+
+    const btnMenu = document.getElementById('btn-menu');
+    const menuLateral = document.getElementById('menu-lateral');
+    const btnFechar = document.getElementById('btn-fechar');
+
+    btnMenu.addEventListener('click', () => {
+        menuLateral.style.width = '250px';
+    });
+
+    btnFechar.addEventListener('click', () => {
+        menuLateral.style.width = '0';
+    });
+});

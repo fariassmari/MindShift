@@ -1,0 +1,108 @@
+:root {
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+
+    --color-bg: #1a1a2e;       /* fundo */
+    --color-cabecalho: #0f0f1f; 
+    --color-primary: #372A73;  /* roxo */
+    --color-text: #fff;        /* branco */
+}
+
+.section-container{
+    width: 100%;
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.banner-img{
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+
+}
+
+.bemvindo-container{
+    width: 100%;
+    background-color: #1B1039;
+    padding: 30px 20px;
+    border-radius: 20px 20px 0 0;
+    margin-top: -20px;
+}
+
+.bemvindo-container h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.bemvindo-container p{
+    color: #dcdcdc;
+    margin: 8px 0 16px;
+    font-size: 1rem;
+}
+
+.btn-comece{
+    min-width: 180px;
+    height: 50px;
+    border-style: none;
+    border-radius: 50px;
+    border: 2px solid var(--color-text);
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.btn-comece:hover{
+    background-color: var(--color-text);
+    color: var(--color-primary);
+}
+
+.atividades-container{
+    background-color: #e9e9e9;
+    color: #000;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    height: auto;
+}
+
+.atividades-container h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.atividades-card{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: center;
+    align-items: start;
+}
+
+.atividades-card i {
+    font-size: 2rem;
+    color: #1B1039;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.atividades-card i:hover{
+    background-color: var(--primary-color);
+    transform: translateY(-15%);
+}
+
+.atividades-card p {
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin: 0;
+}
