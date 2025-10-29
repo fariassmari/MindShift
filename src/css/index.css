@@ -2,15 +2,19 @@
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
 
-    --color-bg: #1a1a2e;       /* fundo */
-    --color-cabecalho: #0f0f1f; 
-    --color-primary: #372A73;  /* roxo */
-    --color-text: #fff;        /* branco */
+    --color-bg: #1a1a2e;    /* fundo */
+    --color-header: #0f0f1f;    /* header e footer */
+    --color-primary: #372A73;  /* hover e destaques */
+    --color-accent: #1B1039;    /* Seções */
+    --color-muted: #dcdcdc;     /* Seções */
+    --color-text-light: #fff;  /* texto ou icons branco */
+    --color-text-black: #000; /* texto ou icons preto */
+    --color-icon: #F3F3F3;   /* icons branco e input */
 }
 
 .section-container{
     width: 100%;
-    color: var(--color-text);
+    color: var(--color-text-light);
     background-color: var(--color-primary);
     text-align: center;
     display: flex;
@@ -24,25 +28,27 @@
     height: auto;
     max-height: 400px;
     object-fit: cover;
-
 }
 
 .bemvindo-container{
     width: 100%;
-    background-color: #1B1039;
-    padding: 30px 20px;
+    background-color: var(--color-accent);
+    padding: 40px 20px;
     border-radius: 20px 20px 0 0;
     margin-top: -20px;
+    height: auto;
+    max-height: 80vh;
 }
 
 .bemvindo-container h1{
+    font-family: var(--font-primary);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-text);
+    color: var(--color-text-light);
 }
 
 .bemvindo-container p{
-    color: #dcdcdc;
+    color: var(--color-muted);
     margin: 8px 0 16px;
     font-size: 1rem;
 }
@@ -52,25 +58,25 @@
     height: 50px;
     border-style: none;
     border-radius: 50px;
-    border: 2px solid var(--color-text);
+    border: 2px solid var(--color-text-light);
     background-color: transparent;
     font-size: 1rem;
     font-weight: 800;
-    color: var(--color-text);
+    color: var(--color-text-light);
     cursor: pointer;
     transition: 0.7s;
 }
 
 .btn-comece:hover{
-    background-color: var(--color-text);
+    background-color: var(--color-text-light);
     color: var(--color-primary);
 }
 
 .atividades-container{
-    background-color: #e9e9e9;
-    color: #000;
+    background-color: var(--color-muted);
+    color: var(--color-text-black);
     width: 100%;
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
     height: auto;
 }
@@ -78,31 +84,145 @@
 .atividades-container h2 {
     font-size: 1.3rem;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
-.atividades-card{
+.atividades-card {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 30px;
     justify-items: center;
-    align-items: start;
+    align-items: center;
+    text-align: center;
+    margin: 30px;
+}
+
+.atividades-card .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .atividades-card i {
     font-size: 2rem;
-    color: #1B1039;
+    color: var(--color-accent);
     margin-bottom: 10px;
-    transition: 0.5s;
-}
-
-.atividades-card i:hover{
-    background-color: var(--primary-color);
-    transform: translateY(-15%);
+    transition: 0.3s;
 }
 
 .atividades-card p {
     font-weight: 500;
-    font-size: 0.95rem;
-    margin: 0;
+    color: var(--color-text-black);
+}
+
+.atividades-card i:hover{
+    color: var(--color-primary);
+    transform: translateY(-15%);
+}
+
+@media (max-width: 1024px) {
+    .banner-img {
+        max-height: 350px;
+    }
+
+    .bemvindo-container h1 {
+        font-size: 1.4rem;
+    }
+
+    .bemvindo-container p {
+        font-size: 0.95rem;
+    }
+
+    .btn-comece {
+        min-width: 160px;
+        height: 45px;
+        font-size: 0.95rem;
+    }
+
+    .atividades-card {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Celulares médios e pequenos (até 768px) */
+@media (max-width: 1023px) {
+    .banner-img {
+        max-height: 300px;
+    }
+
+    .bemvindo-container {
+        padding: 25px 15px;
+    }
+
+    .bemvindo-container h1 {
+        font-size: 1.3rem;
+    }
+
+    .bemvindo-container p {
+        font-size: 0.9rem;
+    }
+
+    .btn-comece {
+        width: 100%;
+        max-width: 220px;
+        font-size: 0.9rem;
+    }
+
+    .atividades-card {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .atividades-card i {
+        font-size: 1.8rem;
+    }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+    .banner-img {
+        max-height: 250px;
+    }
+
+    .bemvindo-container h1 {
+        width: 100%;
+    }
+
+    .bemvindo-container h1 {
+        font-size: 1.1rem;
+    }
+
+    .bemvindo-container p {
+        font-size: 0.85rem;
+    }
+
+    .btn-comece {
+        width: 100%;
+        font-size: 0.85rem;
+        height: 45px;
+    }
+
+    .atividades-container {
+        padding: 25px 10px;
+    }
+
+    .atividades-container h2 {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .atividades-card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .atividades-card i {
+        font-size: 1.6rem;
+    }
+
+    .atividades-card p {
+        font-size: 0.9rem;
+    }
 }
