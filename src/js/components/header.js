@@ -6,7 +6,7 @@ export function criaHeader() {
         <header class="cabecalho" id="header">
             <div class="container-header">
                 <a href="#" class="header-logo">
-                    <img src="./src/img/logo.webp" alt="Logo MindShift">
+                    <img src="./public/img/logo.webp" alt="Logo MindShift">
                 </a>
 
                 <div class="botoes">

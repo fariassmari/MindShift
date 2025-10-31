@@ -7,7 +7,7 @@ export function criaFooter() {
             <div class="container-footer">
                 <div class="footer-section">
                     <h2 class="footer-logo">
-                        <img src="./src/img/logo.webp" alt="Logo MindShift">
+                        <img src="./public/img/logo.webp" alt="Logo MindShift">
                     </h2>
                     <p class="footer-description">Reorganize sua vida da melhor maneira.</p>
                 </div>
