@@ -1,20 +1,22 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
 
-    --color-bg: #1a1a2e;       /* fundo */
-    --color-cabecalho: #0f0f1f; 
-    --color-primary: #6c63ff;  /* roxo */
-    --color-text: #fff;        /* branco */
+    --color-bg: #1a1a2e;    /* fundo */
+    --color-header: #0f0f1f;    /* header e footer */
+    --color-primary: #372A73;  /* hover e destaques */
+    --color-accent: #1B1039;    /* Seções */
+    --color-muted: #dcdcdc;     /* Seções */
+    --color-text-light: #fff;  /* texto ou icons branco */
+    --color-text-black: #000; /* texto ou icons preto */
+    --color-icon: #F3F3F3;   /* icons branco e input */
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body{
     font-family: var(--font-primary);
@@ -24,7 +26,7 @@ body{
 
 .cabecalho{
     width: 100%;
-    background-color: var(--color-cabecalho);
+    background-color: var(--color-header);
     padding: 1rem 2rem;
     display: flex;
     width: 100%;
@@ -46,16 +48,27 @@ body{
     display: block;
 }
 
-.btn-usuario i{
-    margin-left: 600px;
+.botoes {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .btn-usuario i,
 .btn-menu i{
-    color: var(--color-text);
-    font-size: 28px;
+    color: var(--color-text-light);
+    font-size: 30px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.btn-usuario:hover i,
+.btn-menu:hover i {
+    color: var(--color-primary);
+    transform: scale(1.1);
     cursor: pointer;
-    transition: transform 0.3s ease;
+}
+
+.btn-usuario i{
+    margin-right: 20px;
 }
 
 .bi:hover {
@@ -69,7 +82,7 @@ body{
     z-index: 1001;
     top: 0;
     right: 0;
-    background-color: var(--color-cabecalho);
+    background-color: var(--color-header);
     overflow-x: hidden;
     transition: width 0.5s;
     padding-top: 60px;
@@ -85,13 +98,13 @@ body{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: var(--enfase_1);
+    color: var(--color-text-light);
     display: block;
     transition: 0.3s;
 }
 
 .menu-lateral a:hover {
-    color: #f1f1f1;
+    color: var(--color-primary);
 }
 
 /* Botão de fechar (X) */
@@ -107,14 +120,13 @@ body{
     background-color:var(--color-bg);
     width: 700px;
     height: 800px;
-    color: var(--color-text)
+    color: var(--color-text-light);
 }
 
 .footer {
-    background-color: var(--color-cabecalho);
-    color: #fff;
+    background-color: var(--color-header);
+    color: var(--color-text-light);
     padding: 40px 20px 20px;
-    margin-top: 40px;
     text-align: center;
 }
 
@@ -155,7 +167,7 @@ body{
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #fff;
+    color: var(--color-text--ligth);
 }
 
 .footer-social-list {
@@ -172,13 +184,13 @@ body{
     align-items: center;
     gap: 0.4rem;
     font-size: 0.95rem;
-    color: #fff;
+    color: var(--color-text--ligth);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-social-list li a:hover {
-    color: #6c63ff;
+    color: var(--color-primary);
 }
 
 .footer-bottom {
@@ -188,4 +200,87 @@ body{
     color: #aaa;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .container-header img {
+        width: 50px;
+    }
+
+    .btn-usuario i,
+    .btn-menu i {
+        font-size: 26px;
+    }
+
+    .menu-lateral.aberto {
+        width: 200px;
+    }
+
+    .menu-lateral a {
+        font-size: 20px;
+        padding: 10px 24px;
+    }
+
+    .conteudo {
+        width: 90%;
+        height: auto;
+        padding: 1.5rem;
+    }
+
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .footer-logo img {
+        height: 60px;
+    }
+}
+
+/* --- MOBILE --- */
+@media (max-width: 480px) {
+    .cabecalho {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.7rem 1rem;
+    }
+
+    .container-header img {
+        width: 45px;
+    }
+
+    .btn-usuario i {
+        margin-right: 10px;
+    }
+
+    .menu-lateral.aberto {
+        width: 100%;
+    }
+
+    .menu-lateral a {
+        font-size: 1.2rem;
+        padding: 12px 20px;
+    }
+
+    .conteudo {
+        width: 95%;
+        margin-top: 80px;
+        padding: 1rem;
+    }
+
+    .footer {
+        padding: 25px 10px;
+    }
+
+    .footer-social-list {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
 }
